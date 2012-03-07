@@ -1,0 +1,36 @@
+create a program that makes a large tag cloud from all of a last.fm user's friends tag clouds.
+
+verbs:
+makes
+
+nouns:
+large tag cloud
+last.fm user
+last.fm friends tag clouds
+
+inputs:
+last.fm user name
+
+outputs:
+large tag cloud
+
+pseudocode:
+begin
+read last.fm username
+verify last.fm username exists
+ask for permission to access last.fm data: personal, friends list
+make a queue of last.fm users containing the primary user followed by a list of friends
+for each last.fm user in the queue:
+	count tags in their tag cloud
+	add tag counts to the total counts list
+	add 1 to total number of tags
+endfor
+sort tags alphabetically
+for each tag:
+	calculate the size of the tag:
+		tag size is relative to the individual tag count divided by the total tag count
+	print the tag
+endfor
+render the tag cloud graphic
+end
+
