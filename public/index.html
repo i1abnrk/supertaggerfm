@@ -2,6 +2,18 @@
 <html>
   <head>
     <title>Ruby on Rails: Welcome aboard</title>
+<!--//ruby directives
+<% 
+#import closure, scriptaculous, prototype
+#get a list of javascript packages to import on every page
+IMPORT_LIST=new Array(array.split(fileGetContents("/vendor/assets/IMPORT_LIST.csv", ",")));
+#loop through import list
+IMPORT_LIST.count(
+	&NEXT_TOKEN = IMPORT_LIST[tokenCounter];
+	document.write("<script lang="text/javascript">import &NEXT_TOKEN </script>");
+);
+%>
+//-->
     <style type="text/css" media="screen">
       body {
         margin: 0;
