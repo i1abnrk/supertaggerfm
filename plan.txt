@@ -34,3 +34,23 @@ endfor
 render the tag cloud graphic
 end
 
+Pages:
+  welcome.html <-- get last fm username --> initServlet
+  initServlet {
+  -->validateLastFMUser
+	-->requestPermission
+	-->getLastFMFriendList
+  }
+  if(initServlet) --> processorServlet : --> badRequest <-- 400.html
+  processorServlet(lastFMFriendList) {
+	-->lastFMFriendList.each {
+		-->topFriendTags = getTopTags
+		-->topFriendTags.each {processTag}
+	}
+  }
+  processTag(friendTag) {
+	totalTagCount += 1;
+        -->countTag(name, value);
+  }
+
+  supertag.html --> tag cloud graphic
