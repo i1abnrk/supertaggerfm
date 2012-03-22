@@ -15,13 +15,14 @@ group :assets do
   gem 'coffee-rails', '~> 3.2.1'
 
   # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer'
+  #zk- Google V8
+  gem 'therubyracer', :require => 'v8'
 
-  gem 'uglifier', '>= 1.0.3'
+  #use closure instead of uglifier'
+  #gem 'uglifier', '>= 1.0.3'
+  gem 'jquery-rails', '>= 2.0.1'
+  gem 'closure-compiler', '>= 1.0.1'
 end
-
-gem 'jquery-rails'
-gem 'closure-compiler'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
